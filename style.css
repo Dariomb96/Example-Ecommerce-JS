@@ -1,0 +1,663 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: azure;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(107, 2, 107);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(61, 4, 61);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    font-family: 'Quicksand', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(16, [col-start] 1fr);
+    grid-template-rows: repeat(12, [row-start] 1fr);
+    grid-gap: 20px;
+    height: 100%;
+}
+
+.navegacion {
+    grid-column: col-start 2 / span 14;
+    grid-row: row-start 1 / span 1;
+    background-color: black;
+    border-bottom: 0.1rem solid purple;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+a {
+    margin-right: 0.5rem;
+}
+
+footer {
+    grid-column: col-start 2 / span 14;
+    grid-row: row-start 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid purple;
+    padding-top: 0.5rem
+}
+
+.tapa {
+    width: 12rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 8px 8px 0 -3px black, 8px 8px 0 -1px purple;
+}
+
+.tapaRedonda {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 10rem;
+    box-shadow: 8px 8px 0 -3px black, 8px 8px 0 -1px purple;
+}
+
+.tapaChica {
+    width: 10rem;
+    height: 10rem;
+}
+
+/*index.html*/
+
+.tarjetaGrande {
+    grid-column: col-start 2 / span 10;
+    grid-row: row-start 2 / span 9;
+    background-size: cover;
+    background-position: center center;
+    transition: transform .5s;
+    border-radius: 10px;
+
+}
+
+.tarjetaGrande:hover {
+    transform: scale(1.02);
+}
+
+.tarjetaChica1 {
+    grid-column: col-start 12 / span 4;
+    grid-row: row-start 2 / span 3;
+    background-size: cover;
+    background-position: center center;
+    transition: transform .5s;
+    border-radius: 10px;
+}
+
+.tarjetaChica1:hover {
+    transform: scale(1.05);
+}
+
+.tarjetaChica2 {
+    grid-column: col-start 12 / span 4;
+    grid-row: row-start 5 / span 3;
+    background-size: cover;
+    background-position: center center;
+    transition: transform .5s;
+    border-radius: 10px;
+}
+
+.tarjetaChica2:hover {
+    transform: scale(1.05);
+}
+
+.tarjetaChica3 {
+    grid-column: col-start 12 / span 4;
+    grid-row: row-start 8 / span 3;
+    background-size: cover;
+    background-position: center center;
+    transition: transform .5s;
+    border-radius: 10px;
+}
+
+.tarjetaChica3:hover {
+    transform: scale(1.05);
+}
+
+.titulo {
+    grid-column: col-start 2 / span 14;
+    grid-row: row-start 11 / span 1;
+    text-align: center;
+}
+
+.texto {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: azure;
+    text-align: left;
+    margin-left: 0.5rem;
+    margin-top: -0.5rem;
+    text-shadow:
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
+}
+
+/*perfil.html*/
+
+.perfil {
+    grid-column: col-start 2 / span 14;
+    grid-row: row-start 2 / span 3;
+    display: flex;
+}
+
+.textoPerfil {
+    padding-left: 1rem;
+}
+
+.descripcionPerfil {
+    padding-top: 1rem;
+}
+
+.nombrePerfil {
+    text-decoration: underline;
+}
+
+.navMenu {
+    grid-column: col-start 2 / span 12;
+    grid-row: row-start 5 / span 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    border-bottom: 1px solid purple;
+    max-width: 100%;
+}
+
+.navMenuBotones {
+    padding-right: 10%;
+    padding-left: 10%;
+    align-self: center;
+}
+
+.bordeMenu {
+    border-right: 1px solid purple;
+}
+
+.carrusel {
+    grid-column: col-start 2 / span 12;
+    grid-row: row-start 6 / span 6;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.album {
+    min-width: 20%;
+    padding-bottom: 2rem;
+}
+
+/*Artista.html*/
+
+.banner {
+    grid-column: col-start 2 / span 14;
+    grid-row: row-start 2 / span 3;
+    box-shadow: 8px 8px 0 -3px black, 8px 8px 0 -1px purple;
+}
+
+.mainArtista {
+    grid-column: col-start 2 / span 11;
+    grid-row: row-start 5 / span 1;
+}
+
+.pepito {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.artista {
+    grid-column: col-start 14 / span 2;
+    grid-row: row-start 5 / span 7;
+    align-content: center;
+    text-align: center;
+    border-left: 1px solid purple;
+}
+
+.seguir {
+    margin-top: 0.5rem;
+    width: 5rem;
+    font-family: 'montserrat';
+    margin-top: 0.5rem;
+    padding: 0.1rem;
+    background-color: black;
+    color: aliceblue;
+    box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+.linkRedes {
+    margin-bottom: 0.5rem;
+}
+
+.acercaDe {
+    grid-column: col-start 2 / span 12;
+    grid-row: row-start 6 / span 6;
+    overflow: auto;
+
+}
+
+.descripcion {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Montserrat';
+}
+
+/*Album.html*/
+
+.albumDiv {
+    grid-column: col-start 2 / span 10;
+    grid-row: row-start 2 / span 3;
+    display: flex;
+}
+
+.albumDescripcion {
+    overflow: hidden;
+}
+
+.textoDescripcion {
+    margin-top: 1rem;
+}
+
+.infoCompra {
+    grid-column: col-start 12 / span 2;
+    grid-row: row-start 2 / span 2;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.comprarBoton {
+    font-family: 'montserrat';
+    margin-top: 0.5rem;
+    padding: 0.1rem;
+    background-color: black;
+    color: aliceblue;
+    box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;
+}
+
+.albumReproductor {
+    grid-column: col-start 2 / span 12;
+    grid-row: row-start 5 / span 6;
+}
+
+.relacionado {
+    grid-column: col-start 14 / span 2;
+    grid-row: row-start 3 /span 9;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*carrito.html*/
+
+.agregarMetodo {
+    grid-column: col-start 4 / span 3;
+    grid-row: row-start 2 /span 5;
+}
+
+fieldset {
+    padding: 0.5rem;
+}
+
+.metodoPago {
+    display: flex;
+    flex-direction: column;
+}
+
+.selecMetodo {
+    max-width: fit-content;
+    color: black;
+}
+
+input {
+    color: black;
+}
+
+.fechaCaducidad {
+    display: flex;
+    justify-content: space-between;
+    width: 13rem;
+    flex-wrap: nowrap;
+}
+
+.carrito {
+    grid-column: col-start 10 / span 6;
+    grid-row: row-start 2 / span 6;
+    box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;
+}
+
+.albumCarrito {
+    display: flex;
+}
+
+.tapaCarrito {
+    width: 6rem;
+    height: 6rem;
+}
+
+.descripcionCarrito {
+    align-self: center;
+    margin-left: 0.5rem;
+}
+
+.precio {
+    justify-self: flex-end;
+    align-self: center;
+    margin-left: auto;
+    margin-right: 1rem;
+    border-left: 1px solid purple;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+@media (max-width: 600px) {
+    * {
+        font-size: 90%;
+    }
+
+    input {
+        overflow: hidden;
+    }
+
+    /*index.html*/
+
+    .tarjetaGrande {
+        grid-column: col-start 2 / span 14;
+        grid-row: row-start 2 / span 3;
+    }
+
+    .tarjetaChica1 {
+        grid-column: col-start 2 / span 14;
+        grid-row: row-start 5 / span 2;
+    }
+
+    .tarjetaChica2 {
+        grid-column: col-start 2 / span 14;
+        grid-row: row-start 7 / span 2;
+    }
+
+    .tarjetaChica3 {
+        grid-column: col-start 2 / span 14;
+        grid-row: row-start 9 / span 2;
+    }
+
+    /*perfil*/
+
+    .tapaRedonda {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    #editar {
+        width: 1rem;
+        margin-left: 0.5rem;
+    }
+
+    .navMenu {
+        grid-column: col-start 2 / span 14;
+        font-size: 1.1rem;
+    }
+
+    .navMenuBotones {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .carrusel {
+        grid-column: col-start 2 / span 13;
+        justify-content: flex-start;
+    }
+
+    .tapa {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    iframe {
+        width: 95%;
+    }
+
+    .descripcion {
+        font-size: 1rem;
+    }
+
+    /*artista.html*/
+
+    .banner {
+        display: none;
+    }
+
+    .artista {
+        grid-column: col-start 2 / span 14;
+        grid-row: row-start 2 / span 3;
+        display: flex;
+        max-height: 5rem;
+        flex-direction: row;
+        max-width: 100%;
+        max-height: 100%;
+        text-align: start;
+    }
+
+    #artistaTapa {
+        width: 75%;
+        height: 75%;
+    }
+
+    #artistaDesc {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .seguir {
+        min-width: 4rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    .redes {
+        max-height: 100%;
+        margin: 0;
+    }
+
+    .linkRedes {
+        margin: 0;
+    }
+
+    /*album.html*/
+
+    .albumDiv {
+        grid-column: col-start 2 / span 10;
+        grid-row: row-start 2 / span 4;
+    }
+
+    #tapaAlbum {
+        display: none;
+    }
+
+    .infoCompra {
+        grid-column: col-start 12 / span 4;
+        grid-row: row-start 2 / span 5;
+        margin: 0;
+    }
+
+    h1.textoDescripcion {
+        margin: 0;
+        padding-bottom: 0.5rem;
+    }
+
+    .textoDescripcion {
+        margin: 0;
+        max-height: 100%;
+        overflow: auto;
+    }
+
+    .albumIco {
+        display: inline;
+        width: 25%;
+    }
+
+    .albumReproductor {
+        grid-column: col-start 2 / span 15;
+        grid-row: row-start 6 / span 6;
+    }
+
+    iframe {
+        max-height: 100%;
+    }
+
+    .comprarBoton {
+        height: 20%;
+    }
+
+    .relacionado {
+        display: none;
+    }
+
+    /*carrito.html*/
+
+    .agregarMetodo {
+        grid-column: col-start 2 / span 10;
+        grid-row: row-start 7 / span 5;
+    }
+
+    .carrito {
+        grid-column: col-start 2 / span 14;
+        grid-row: row-start 2 / span 5;
+        max-height: 100%;
+        overflow: auto;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    /*perfil*/
+
+    .navMenu {
+        grid-column: col-start 2 / span 12;
+        font-size: 1.1rem;
+    }
+
+    .navMenuBotones {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .carrusel {
+        grid-column: col-start 2 / span 12;
+        justify-content: flex-start;
+    }
+
+    .tapa {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    /*artista.html*/
+
+    .artista {
+        grid-column: col-start 14 / span 3;
+    }
+
+    #artistaTapa {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .redes {
+        display: flex;
+        text-align: center;
+    }
+
+    /*album.html*/
+
+    .albumDiv {
+        grid-column: col-start 2 / span 9;
+    }
+
+    #tapaAlbum {
+        display: none;
+    }
+
+    .infoCompra {
+        grid-column: col-start 11 / span 2;
+    }
+
+    .albumReproductor {
+        grid-column: col-start 2 / span 11;
+    }
+
+    .relacionado {
+        grid-column: col-start 13 / span 3;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+    .redes {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .albumDiv {
+        grid-column: col-start 2 / span 9;
+    }
+
+    .albumDescripcion {
+        margin-left: 5rem;
+    }
+
+    .infoCompra {
+        grid-column: col-start 11 / span 2;
+    }
+
+    .albumReproductor {
+        grid-column: col-start 2 / span 11;
+    }
+
+    .relacionado {
+        grid-column: col-start 13 / span 3;
+    }
+
+
+
+}

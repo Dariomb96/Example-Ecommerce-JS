@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Poopify</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Quicksand:wght@300;400;600&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navegacion">
+		<a href="index.html">
+			<img src="recursos/poopifyv.png" alt="Poopify">
+		</a>
+		<a class="active" href="perfil.html">Perfil</a>
+		<a href="artista.html">Artista</a>
+		<a href="album.html">Album</a>
+		<a href="carrito.html">Carrito</a>
+		<input style="margin-left:10px" type="text" placeholder="Buscar..">
+	</nav>
+	<section class="albumDiv">
+		<div id="tapaAlbum" class="album">
+			<img class="tapa" src="recursos/grimes4.jpg" alt="miss anthropocene">
+		</div>
+		<div class="albumDescripcion">
+			<h1 class="textoDescripcion">Miss anthropocene</h1>
+			<p class="textoDescripcion">Con su fiel estilo de hazlo tú mismo, Claire quiso darle a este trabajo un
+				concepto más oscuro,
+				pero siempre pop. Su inspiración fue el cambio climático, la mitología griega y romana, y por
+				supuesto, la Inteligencia Artificial. Con el fin de darle un rostro a lo que ella define como
+				“una condenación abstracta”, en referencia al calentamiento global, decidió crear la Diosa
+				villana: Miss Anthropocene, esto es un juego de palabras entre Misántropo y Antropoceno, y
+				curiosamente no se habla mucho de ella en el disco.</p>
+		</div>
+	</section>
+		<section class="infoCompra">
+			<div class="iconosAlbum">
+				<img class="albumIco" src="recursos/add.ico" alt="icono agregar">
+				<img class="albumIco" src="recursos/bookmark.ico" alt="icono marcar">
+				<img class="albumIco" src="recursos/heart.ico" alt="icono like">
+			</div>
+			<input class="comprarBoton" type="submit" value="Digital">
+			<input class="comprarBoton" type="submit" value="Vinilo">
+		</section>
+	<section class="albumReproductor">
+		<iframe style="border-radius:2px" width="100%" height="550" frameborder="0" allowfullscreen="0"
+			src="https://open.spotify.com/embed/album/4zyqNfmTrnvUejh8M1IEh9?utm_source=generator&theme=0"
+			allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+	</section>
+	<aside class="relacionado">
+		<h3>Relacionado</h3>
+		<div class="album">
+			<img src="recursos/tapa11.jpg" alt="tapa" class="tapa tapaChica">
+			<h3>Album</h3>
+		</div>
+		<div class="album">
+			<img src="recursos/tapa8.jpg" alt="tapa" class="tapa tapaChica">
+			<h3>Album</h3>
+		</div>
+		<div class="album">
+			<img src="recursos/tapa14.jpg" alt="tapa" class="tapa tapaChica">
+			<h3>Album</h3>
+		</div>
+		<div class="album">
+			<img src="recursos/tapa5.jpg" alt="tapa" class="tapa tapaChica">
+			<h3>Album</h3>
+		</div>
+	</aside>
+	<footer>
+		<h3> Copyright © 2022 Poopify ™ - Todos los derechos reservados </h3>
+		<img class="poopify" src="recursos/poopifyv.png" alt="poopify logo">
+	</footer>
+</body>
+
+</html>
