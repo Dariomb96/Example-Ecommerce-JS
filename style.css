@@ -212,9 +212,30 @@ footer {
     overflow-x: hidden;
 }
 
+.agregar {
+    position:inline-block;
+    display: none;
+    font-family: 'montserrat';
+    background-color: black;
+    color: aliceblue;
+    box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;
+}
+.agregar:active {
+    transform: scale(0.90);
+}
+
+.album:hover{
+    margin-bottom: -2rem;
+}
+
+.album:hover > .agregar {
+    display: inline-block;
+    align-self: center;
+}
+
 .album {
     min-width: 20%;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 /*Artista.html*/

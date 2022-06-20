@@ -36,6 +36,7 @@ const carrito = [];
 function actualizarCarrito() {
     carritoActualizadoD = carrito.map((el) => {
         return {
+            id: el.id,
             nombre: el.artista,
             precio: el.preciod,
             comprado: el.compradod,
@@ -43,12 +44,20 @@ function actualizarCarrito() {
     });
     carritoActualizadoV = carrito.map((el) => {
         return {
+            id: el.id,
             nombre: el.artista,
             precio: el.preciov,
             comprado: el.compradov,
         }
     });
     carritoFinal = carritoActualizadoD.concat(carritoActualizadoV);
+    carritoFinal.sort((a, b) => a.id - b.id)
+}
+
+function mostrarCarrito(){
+    carritoFinal.forEach ( (item) => {
+        carritoFinal[item]
+    })
 }
 
 /***********************************************        MENU DE SELECCION DE FORMATO Y CANTIDAD DEL PRODUCTO    ******************************************************/
