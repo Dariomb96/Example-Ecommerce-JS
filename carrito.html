@@ -2,128 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poopify</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Quicksand:wght@300;400;600&display=swap"
-        rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Poopify</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Quicksand:wght@300;400;600&display=swap"
+		rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navegacion">
-        <a href="index.html">
-            <img src="recursos/poopifyv.png" alt="Poopify">
-        </a>
-        <a class="active" href="perfil.html">Perfil</a>
-        <a href="artista.html">Artista</a>
-        <a href="album.html">Album</a>
-        <a href="carrito.html">Carrito</a>
-        <input style="margin-left:10px" type="text" placeholder="Buscar..">
-    </nav>
-    <form class="agregarMetodo" action="#" method="post" enctype="application/x-www-form-urlencoded:">
-        <fieldset>
-            <legend>Agregar metodo de pago</legend>
-            <div class="metodoPago">
-                <label for="metodo">Metodo de pago</label>
-                <select class="selecMetodo" name="metodo">
-                    <option value="A">tarjeta credito</option>
-                    <option value="B">tarjeta debito</option>
-                </select>
-            </div>
-            <div class="numeroTarjeta">
-                <label for="nombre">Numero Tarjeta</label>
-                <br>
-                <input id="numero tarjeta" type="text" name="numero tarjeta" placeholder="Numero de tarjeta">
-            </div>
-            <div>
-                <label for="Fecha tarjeta">Fecha de caducidad</label>
-            </div>
-            <div class="fechaCaducidad">
-                <div>
-                    <label for="fecha tarjeta">Mes</label>
-                    <br>
-                    <input style="width: 30px;" type="number" min="1" max="12" name="Mes">
-                </div>
-                <div>
-                    <label for="fecha tarjeta">Año</label>
-                    <br>
-                    <input style="width: 60px;" type="number" name="Año">
-                </div>
-                <div>
-                    <label for="fecha tarjeta">Cod. de Seg.</label>
-                    <br>
-                    <input style="width: 30px;" type="text" maxlength="3" name="Cod de seg">
-                </div>
-            </div>
-            <div class="nombreTitular">
-                <label for="nombre">Nombre titular</label>
-                <br>
-                <input id="numero tarjeta" type="text" name="nombre tarjeta" placeholder="Nombre que figura en tarjeta">
-            </div>
-            <div>
-                <label>Guardar informacion de tarjeta<label>
-                        <input type="checkbox" name="acepta" value="1" />
-            </div>
-            <div>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpiar">
-            </div>
-        </fieldset>
-    </form>
-    <aside class="carrito">
-        <section class="productos">
-            <div class="albumCarrito">
-                <img src="recursos/tapa3.jpg" alt="tapa" class="tapa tapaCarrito">
-                <div class="descripcionCarrito">
-                    <h3>Album</h3>
-                    <p>Artista</p>
-                </div>
-                <div class="precio">
-                    <h1>$999</h1>
-                </div>
-            </div>
-            <div class="albumCarrito">
-                <img src="recursos/tapa1.jpg" alt="tapa" class="tapa tapaCarrito">
-                <div class="descripcionCarrito">
-                    <h3>Album</h3>
-                    <p>Artista</p>
-                </div>
-                <div class="precio">
-                    <h1>$999</h1>
-                </div>
-            </div>
-            <div class="albumCarrito">
-                <img src="recursos/tapa2.jpg" alt="tapa" class="tapa tapaCarrito">
-                <div class="descripcionCarrito">
-                    <h3>Album</h3>
-                    <p>Artista</p>
-                </div>
-                <div class="precio">
-                    <h1>$999</h1>
-                </div>
-            </div>
-            <div class="albumCarrito">
-                <img src="recursos/tapa4.jpg" alt="tapa" class="tapa tapaCarrito">
-                <div class="descripcionCarrito">
-                    <h3>Album</h3>
-                    <p>Artista</p>
-                </div>
-                <div class="precio">
-                    <h1>$999</h1>
-                </div>
-            </div>
-        </section>
-    </aside>
-    <footer>
-        <h3> Copyright © 2022 Poopify ™ - Todos los derechos reservados </h3>
-        <img class="poopify" src="recursos/poopifyv.png" alt="poopify logo">
-    </footer>
-    <script src="app.js"></script>
+	<nav class="navegacion">
+		<a href="index.html">
+			<img src="recursos/poopifyv.png" alt="Poopify">
+		</a>
+		<a href="perfil.html">Perfil</a>
+		<a href="artista.html">Artista</a>
+		<a href="album.html">Album</a>
+		<a href="carrito.html">Carrito</a>
+		<input type="text" placeholder="Buscar..">
+	</nav>
+	<section id="carrito">
+	</section>
+	<aside id="total">
+		<div id="precioFinal">
+			<div>
+				<h3 id="xxx">Total:</h3>
+			</div>
+			<div>
+				<h3 id="yyy"></h3>
+			</div>
+		</div>
+	</aside>
+	<footer>
+		<h3> Copyright © 2022 Poopify ™ - Todos los derechos reservados </h3>
+		<img class="poopify" src="recursos/poopifyv.png" alt="poopify logo">
+	</footer>
+	<script src="js/const.js"></script>
+	<script src="js/carrito.js"></script>
 </body>
 
 </html>
