@@ -12,12 +12,12 @@ const mostrarCarrito = () => { //genera en el section listadoLikes cada producto
 			<p class="productoPrecio">$${producto.precio}</p>
 		</div>`;
 		total.push(producto.precio);
-		totalCarrito.innerText = `$${sumaPrecios(...total)}`
 	});
+	totalCarrito.innerText = `$${sumaPrecios(...total)}`
 };
 
-function sumaPrecios(...precios){
-	return precios.reduce((a,b) => a+b, 0)
+function sumaPrecios(...precios) {
+	return precios.reduce((a, b) => a + b, 0)
 }
 
 
