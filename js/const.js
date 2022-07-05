@@ -6,4 +6,4 @@ const totalCarrito = document.getElementById('yyy');
 const likes = []; // array de likes
 const carrito = []; // array de carrito
 
-let total = 0; // total del carrito
+const total = []; // total del carrito
