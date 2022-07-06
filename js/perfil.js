@@ -12,6 +12,19 @@ const mostrarProductos = () => { //genera en el section listado cada producto de
     });
 };
 
+function notificacion(formato){
+    Toastify({
+        text: `Agregado a ${formato} con exito!`,
+        duration: 2500,
+        gravity: 'bottom',
+        stopOnFocus: true,
+        style: {
+            background: 'black',
+            border: '1px solid purple',
+        }
+    }).showToast()
+}
+
 /* boton a cada producto para agregarlo a listadoLikes, transformando en JSON los objetos para luego parsear 
 y deshabilitando el boton para no repetir cada objeto*/
 const agregarALikes = e => {
@@ -22,6 +35,7 @@ const agregarALikes = e => {
         console.log(likes)
         localStorage.setItem('keyLikes', JSON.stringify(likes));
         document.getElementById(`${producto.id}`).innerHTML = `<button id="${producto.id}" class="agregarLikes" disabled>Agregar a likes</button>`;
+        notificacion('likes');
     }
 };
 
@@ -33,6 +47,7 @@ const agregarACarrito = e => {
         carrito.push(producto);
         console.log(carrito);
         localStorage.setItem('keyCarrito', JSON.stringify(carrito));
+        notificacion('carrito');
     }
 };
 

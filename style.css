@@ -224,6 +224,11 @@ footer {
     transform: scale(0.90);
 }
 
+.toasty{
+    background-color: black;
+    box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;
+}
+
 .album:hover{
     margin-bottom: -2rem;
 }
