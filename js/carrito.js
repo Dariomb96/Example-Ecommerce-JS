@@ -1,6 +1,5 @@
-const storageCarrito = JSON.parse(localStorage.getItem('keyCarrito')); ////parseo de JSON a objeto
 
-const mostrarCarrito = () => { //genera en el section listadoLikes cada producto del array "likes"
+const mostrarCarrito = () => {
 	storageCarrito.forEach(producto => {
 		contenedorCarrito.innerHTML += `
 		<div class="template">
@@ -16,9 +15,26 @@ const mostrarCarrito = () => { //genera en el section listadoLikes cada producto
 	totalCarrito.innerText = `$${sumaPrecios(...total)}`
 };
 
+const limpiarCarrito = e => {
+	if (e.target.classList.contains('comprarBoton')) {
+		localStorage.removeItem('keyCarrito');
+		Toastify({
+			text: `Carrito limpiado con exito, recarga la pagina!`,
+			duration: 2500,
+			gravity: 'bottom',
+			stopOnFocus: true,
+			style: {
+				background: 'black',
+				border: '1px solid purple',
+			}
+		}).showToast();
+	}
+};
+
+
 function sumaPrecios(...precios) {
 	return precios.reduce((a, b) => a + b, 0)
 }
 
-
 document.addEventListener('DOMContentLoaded', mostrarCarrito);
+document.addEventListener('click', limpiarCarrito);

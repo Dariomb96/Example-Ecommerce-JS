@@ -1,3 +1,23 @@
+let productos = []
+
+fetch('js/listado.json')
+    .then( (res) => res.json())
+    .then( (data) => {
+        productos = data
+
+        productos.forEach(producto => {
+            listaProductos.innerHTML += `
+            <div class="album">
+            <img src="${producto.img}" alt="tapa" class="tapa tapaChica">
+                    <h3>${producto.nombre}</h3>
+                    <p>${producto.artista}</p>
+                    <button id="${producto.id}" class="agregarLikes" >Agregar a likes</button>
+                    <button id="${producto.id}" class="agregarCarrito" >Agregar a carrito</button>
+                </div>
+            `;
+        });
+    });
+
 const mostrarProductos = () => { //genera en el section listado cada producto del array "listadoProductos"
     productos.forEach(producto => {
         listaProductos.innerHTML += `
@@ -12,9 +32,9 @@ const mostrarProductos = () => { //genera en el section listado cada producto de
     });
 };
 
-function notificacion(formato){
+function notificacion(producto, formato) {
     Toastify({
-        text: `Agregado a ${formato} con exito!`,
+        text: `${producto} agregado a ${formato} con exito!`,
         duration: 2500,
         gravity: 'bottom',
         stopOnFocus: true,
@@ -35,7 +55,7 @@ const agregarALikes = e => {
         console.log(likes)
         localStorage.setItem('keyLikes', JSON.stringify(likes));
         document.getElementById(`${producto.id}`).innerHTML = `<button id="${producto.id}" class="agregarLikes" disabled>Agregar a likes</button>`;
-        notificacion('likes');
+        notificacion(producto.nombre, 'likes');
     }
 };
 
@@ -45,11 +65,11 @@ const agregarACarrito = e => {
         const id = e.target.id;
         const producto = productos.find(producto => producto.id == id);
         carrito.push(producto);
-        console.log(carrito);
         localStorage.setItem('keyCarrito', JSON.stringify(carrito));
-        notificacion('carrito');
+        notificacion(producto.nombre, 'carrito');
     }
 };
+
 
 document.addEventListener('DOMContentLoaded', mostrarProductos);
 listaProductos.addEventListener('click', agregarALikes);

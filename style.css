@@ -220,13 +220,14 @@ footer {
     color: aliceblue;
     box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;
 }
+
 .agregarLikes:active {
     transform: scale(0.90);
 }
 
 .toasty{
     background-color: black;
-    box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;
+    
 }
 
 .album:hover{
@@ -346,11 +347,12 @@ footer {
 
 .comprarBoton {
     font-family: 'montserrat';
-    margin-top: 0.5rem;
-    padding: 0.1rem;
+    margin-top: 0rem;
+    padding: 1rem;
     background-color: black;
     color: aliceblue;
-    box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;
+    border: 1px solid purple;
+    /*box-shadow: 5px 5px 0 -3px black, 5px 5px 0 -1px purple;*/
 }
 
 .albumReproductor {
@@ -407,7 +409,7 @@ footer {
 #resumen{
     width: 100%;
     height: 80%;
-    background-color: red;
+    border-bottom: 1px solid purple;
     padding: 2rem;
 }
 
