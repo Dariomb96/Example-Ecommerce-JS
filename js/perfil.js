@@ -64,13 +64,18 @@ const agregarACarrito = e => {
     if (e.target.classList.contains('agregarCarrito')) {
         const id = e.target.id;
         const producto = productos.find(producto => producto.id == id);
-        carrito.push(producto);
+        const enCarrito = carrito.find(producto => producto.id == id);
+        enCarrito ? enCarrito.cantidad += 1 : (producto.cantidad += 1, carrito.push(producto));
         localStorage.setItem('keyCarrito', JSON.stringify(carrito));
         notificacion(producto.nombre, 'carrito');
     }
 };
 
+const actualizarCarrito = () => {
+    carrito.push(...JSON.parse(localStorage.getItem('keyCarrito')));
+}
 
+document.addEventListener('DOMContentLoaded', actualizarCarrito);
 document.addEventListener('DOMContentLoaded', mostrarProductos);
 listaProductos.addEventListener('click', agregarALikes);
 listaProductos.addEventListener('click', agregarACarrito);
