@@ -12,9 +12,13 @@ const mostrarCarrito = () => {
 				<p>${producto.artista}</p>
 			</div>
 			<div class="productoPrecio">
-			<p>Precio : $${producto.precio}</p>
-			<p style="margin-top: 0.2rem;">Cantidad : ${producto.cantidad}</p>
-			<p style="margin-top: 0.5rem;">Subtotal : $${producto.precio * producto.cantidad}</p>
+			<p>Precio : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$${producto.precio}</p>
+			<div class="flexProducto">
+			<p style="margin-top: 0.2rem;">Cantidad :&nbsp;&nbsp;&nbsp;</p>
+			<span onclick="restarProducto(${producto.id});" id='restar'><i class="material-icons restar">remove</i></span>
+			<p>${producto.cantidad}</p>
+			<span onclick="sumarProducto(${producto.id});" id='sumar'><i class="material-icons sumar">add</i></span>
+			</div>
 			</div>
 		<button onclick="EliminarProducto(${producto.id})" class="btnEliminar">Eliminar</button>`;
 		contenedorCarrito.append(div);
@@ -33,23 +37,20 @@ function mostrarResumen() {
 			id: el.id,
 		}
 	})
-	console.log(actualizado);
 	contenedorResumen.innerHTML = '';
 	actualizado.forEach((producto) => {
 		const div = document.createElement('div');
 		div.classList.add('resumenProducto');
 		div.classList.add('noselect');
 		div.innerHTML = `
-			<div style="margin-right: auto;"><p style="margin-right: 50px;">${producto.nombre} - ${producto.artista}</p></div>
+			<div class="nombreResumen"><p>${producto.nombre} - ${producto.artista}</p></div>
 			<div class="flexResumen">
-			<span onclick="restarProducto(${producto.id});" id='restar'><i class="material-icons restar">remove</i></span>
-			<p>x${producto.cantidad}</p>
-			<span onclick="sumarProducto(${producto.id});" id='sumar'><i class="material-icons sumar">add</i></span>
+			<p>$${producto.precio * producto.cantidad}</p>
+			<span onclick="EliminarProducto(${producto.id})"><i class="material-symbols-outlined">delete</i></span>
 			</div>
 			`;
 		contenedorResumen.append(div);
 	})
-
 }
 
 function calcularTotal() {
@@ -62,7 +63,6 @@ function calcularTotal() {
 }
 const sumarProducto = e => {
 	const item = storageCarrito.find(producto => producto.id === e);
-	console.log(item);
 	item.cantidad += 1;
 	calcularTotal()
 	localStorage.setItem('keyCarrito', JSON.stringify(storageCarrito));
@@ -71,7 +71,6 @@ const sumarProducto = e => {
 
 const restarProducto = (e) => {
 	const item = storageCarrito.find(producto => producto.id === e);
-	console.log(item);
 	item.cantidad -= 1;
 	console.log(storageCarrito);
 	if (item.cantidad === 0) {
@@ -117,19 +116,6 @@ const limpiarCarrito = e => {
 		mostrarCarrito();
 	}
 };
-
-
-/*if (.target.classList.contains('restar')){
-	const id = e.target.id;
-	const producto = storageCarrito.find(producto => producto.id == id);
-	producto.cantidad -= 1;
-	if (item.cantidad === 0) {
-		const indice = storageCarrito.indexOf(producto);
-		storageCarrito.splice(indice, 1);
-	}
-	calcularTotal()
-}*/
-
 
 document.addEventListener('DOMContentLoaded', mostrarCarrito);
 document.addEventListener('click', limpiarCarrito);

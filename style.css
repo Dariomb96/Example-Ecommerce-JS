@@ -68,6 +68,7 @@ footer {
     margin: 0.5rem;
     border-radius: 1rem;
     box-shadow: 8px 8px 0 -3px black, 8px 8px 0 -1px purple;
+    cursor: pointer;
 }
 
 .tapaRedonda {
@@ -272,6 +273,8 @@ footer {
     align-self: center;
 }
 
+
+
 /*Artista.html*/
 
 .banner {
@@ -449,16 +452,41 @@ footer {
 }
 
 .resumenProducto {
+    padding: 5px;
     display: flex;
     justify-content: end;
     height: auto;
     width: 100%;
     border-bottom: 1px solid purple;
 }
+.flexProducto {
+    display: flex;
+    justify-content: start;
+}
+
+.nombreResumen{
+    font-size: 0.95rem;
+    margin-right: auto;
+    align-self: center;
+    margin-left: 5px;
+}
+
+
+.material-symbols-outlined {
+    cursor: pointer;
+    margin-left: 10px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' -25,
+  'opsz' 48
+}
+
 
 .flexResumen {
+    margin-top: 8px;
     display: flex;
-    justify-content: end;
+    justify-content: start;
 }
 
 #precioFinal {

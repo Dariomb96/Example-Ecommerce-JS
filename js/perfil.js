@@ -18,19 +18,6 @@ fetch('js/listado.json')
         });
     });
 
-const mostrarProductos = () => { //genera en el section listado cada producto del array "listadoProductos"
-    productos.forEach(producto => {
-        listaProductos.innerHTML += `
-        <div class="album">
-        <img src="${producto.img}" alt="tapa" class="tapa tapaChica">
-                <h3>${producto.nombre}</h3>
-                <p>${producto.artista}</p>
-                <button id="${producto.id}" class="agregarLikes" >Agregar a likes</button>
-                <button id="${producto.id}" class="agregarCarrito" >Agregar a carrito</button>
-            </div>
-        `;
-    });
-};
 
 function notificacion(producto, formato) {
     Toastify({
@@ -76,6 +63,5 @@ const actualizarCarrito = () => {
 }
 
 document.addEventListener('DOMContentLoaded', actualizarCarrito);
-document.addEventListener('DOMContentLoaded', mostrarProductos);
 listaProductos.addEventListener('click', agregarALikes);
 listaProductos.addEventListener('click', agregarACarrito);
