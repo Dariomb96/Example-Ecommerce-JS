@@ -1,4 +1,4 @@
-
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Dariomb96/Example-Ecommerce-JS/blob/main/README.en.md)
 # Simulador de Compra en JavaScript
 
 Este proyecto es un simulador de compra desarrollado en JavaScript puro. Te permite simular una compra agregando productos al carrito desde el URL del perfil y luego visualizar en detalle cada producto con la posibilidad de ajustar la cantidad deseada. Además, ofrece funciones para eliminar productos individualmente o limpiar completamente el carrito.
